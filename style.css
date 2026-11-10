@@ -28,12 +28,15 @@
 
 html {
   scroll-behavior: auto;
+  overflow-x: hidden;
 }
 
 html,
 body {
   background: var(--background);
   color: var(--text);
+  width: 100%;
+  max-width: 100%;
 }
 
 body {
@@ -310,6 +313,8 @@ section {
   justify-content: space-between;
   padding: 26px clamp(20px, 4vw, 56px);
   transition: transform .5s var(--ease), background .4s ease, backdrop-filter .4s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .nav.blurred {
@@ -424,6 +429,10 @@ section {
 
   .nav-burger {
     display: flex;
+  }
+
+  .nav {
+    padding: 20px clamp(16px, 4vw, 32px);
   }
 }
 
@@ -1115,6 +1124,7 @@ section {
   padding: 160px clamp(20px, 6vw, 80px);
   background: var(--surface);
   text-align: center;
+  overflow: hidden;
 }
 
 .flow-sub {
@@ -1126,6 +1136,7 @@ section {
 .flow-signature-svg {
   width: 100%;
   max-width: 1100px;
+  overflow: visible;
 }
 
 .fs-track {
@@ -1259,6 +1270,7 @@ section {
   .timeline-track {
     flex-direction: column;
     gap: 36px;
+    overflow-x: visible;
   }
 
   .timeline-line {
@@ -1752,5 +1764,122 @@ section {
   .training-card {
     flex-direction: column;
     gap: 10px;
+  }
+}
+
+/* ============================================
+   MOBILE OVERFLOW / SIZING FIXES
+   ============================================ */
+
+/* Ensure all direct children of body and main don't exceed viewport */
+main,
+header,
+footer {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+section {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 860px) {
+
+  /* Industrial flow: shrink font and node size on small screens */
+  .flow-signature {
+    padding: 80px clamp(16px, 4vw, 32px);
+  }
+
+  .flow-signature-svg {
+    min-width: 0;
+  }
+
+  .fs-node text {
+    font-size: 10px;
+  }
+
+  .fs-node .fs-sub {
+    font-size: 9px;
+  }
+
+  /* Numbers grid: 2 col on tablet, full on mobile */
+  .numbers {
+    padding: 80px clamp(16px, 4vw, 32px);
+  }
+
+  /* Ideas track: allow swipe scroll but constrain width */
+  .ideas-track-wrap {
+    overflow-x: hidden;
+  }
+
+  .ideas-track {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 16px;
+  }
+
+  .idea-card {
+    scroll-snap-align: start;
+  }
+
+  /* Intro grid stacks */
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .intro-stat {
+    border-left: none;
+    border-top: 1px solid rgba(23, 23, 23, .12);
+    padding-left: 0;
+    padding-top: 32px;
+  }
+
+  /* About me stacks */
+  .about-me {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 80px clamp(16px, 4vw, 32px);
+  }
+
+  /* Care section */
+  .care {
+    max-width: 100%;
+    width: 100%;
+    padding: 80px clamp(16px, 4vw, 32px);
+  }
+
+  /* Mobile menu full cover */
+  .mobile-menu {
+    padding: 0 clamp(16px, 6vw, 32px);
+  }
+}
+
+@media (max-width: 520px) {
+
+  /* Numbers: single column on small phones */
+  .numbers-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  /* Flow signature — hide on very small screens to avoid overflow */
+  .flow-signature-svg {
+    display: none;
+  }
+
+  /* Hero adjustments */
+  .hero {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+  /* Certifications */
+  .certs-row {
+    grid-template-columns: 1fr;
   }
 }
