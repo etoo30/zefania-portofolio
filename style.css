@@ -1611,3 +1611,146 @@ section {
     scroll-behavior: auto !important;
   }
 }
+
+/* ============================================
+   FINAL PROJECT
+   ============================================ */
+.final-project {
+  padding: 140px clamp(20px, 6vw, 80px);
+  background: var(--dark-section);
+  color: var(--dark-text);
+}
+
+.fp-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.fp-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(32px, 5vw, 64px);
+  line-height: 1.1;
+  margin-top: 12px;
+}
+
+.fp-title em {
+  color: var(--accent);
+  font-style: italic;
+}
+
+.fp-sub {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: .06em;
+  color: var(--dark-muted);
+  margin-top: 14px;
+}
+
+.fp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 56px;
+  border-top: 1px solid rgba(247, 243, 239, .08);
+  padding-top: 36px;
+}
+
+.fp-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fp-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .12em;
+  color: var(--accent);
+}
+
+.fp-item p {
+  font-size: 14px;
+  color: var(--dark-muted);
+  line-height: 1.65;
+}
+
+@media (max-width: 640px) {
+  .fp-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   CERTIFICATIONS — extended for 5 certs + issuer
+   ============================================ */
+.certs-row {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (min-width: 1100px) {
+  .certs-row {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.cert-issuer {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: .06em;
+  color: var(--muted);
+  opacity: .7;
+}
+
+/* ============================================
+   TRAINING CARD
+   ============================================ */
+.training-row {
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+.training-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  border: 1px solid rgba(23, 23, 23, .15);
+  border-radius: 2px;
+  padding: 32px 36px;
+  margin-top: 24px;
+  transition: transform .4s var(--ease), border-color .4s ease;
+}
+
+.training-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.training-code {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: .08em;
+  color: var(--accent);
+  white-space: nowrap;
+  padding-top: 2px;
+  flex-shrink: 0;
+}
+
+.training-name {
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.training-issuer {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+@media (max-width: 640px) {
+  .training-card {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
