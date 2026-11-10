@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zefania Sinaringtyas Widuri — Industrial Chemical Engineering Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Zefania Sinaringtyas Widuri, an Industrial Chemical Engineering Technology student interested in quality control, industrial processes, research, and sustainable solutions.">
+
+  <meta property="og:title" content="Zefania Sinaringtyas Widuri — Industrial Chemical Engineering Portfolio">
+  <meta property="og:description"
+    content="Recent graduate in Industrial Chemical Engineering Technology. Petrochemical process & production, quality management, and biomass renewable-energy research.">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Custom cursor (desktop only) -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <span class="cursor-label"></span>
+  </div>
+
+  <!-- Page progress -->
+  <div class="progress-rail" aria-hidden="true">
+    <span class="progress-tick" data-p="0">00</span>
+    <span class="progress-tick" data-p="25">25</span>
+    <span class="progress-tick" data-p="50">50</span>
+    <span class="progress-tick" data-p="75">75</span>
+    <span class="progress-tick" data-p="100">100</span>
+    <div class="progress-line">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+  </div>
+  <div class="progress-top" id="progressTop" aria-hidden="true"></div>
+
+  <!-- Loader -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <svg class="loader-diagram" viewBox="0 0 220 60" width="220" height="60">
+      <circle cx="18" cy="30" r="6" class="lp-node" />
+      <line x1="24" y1="30" x2="70" y2="30" class="lp-line" />
+      <circle cx="76" cy="30" r="6" class="lp-node" />
+      <line x1="82" y1="30" x2="128" y2="30" class="lp-line" />
+      <circle cx="134" cy="30" r="6" class="lp-node" />
+      <line x1="140" y1="30" x2="186" y2="30" class="lp-line" />
+      <circle cx="192" cy="30" r="6" class="lp-node" />
+    </svg>
+    <h1 class="loader-name" id="loaderName">ZEFANIA SINARINGTYAS WIDURI</h1>
+    <p class="loader-role">Industrial Chemical Engineering Technology</p>
+    <div class="loader-bar">
+      <div class="loader-bar-fill" id="loaderFill"></div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="nav" id="siteNav">
+    <a href="#top" class="nav-mark">ZEFANIA</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about" data-cursor="VIEW">ABOUT</a>
+      <a href="#experience" data-cursor="VIEW">EXPERIENCE</a>
+      <a href="#research" data-cursor="VIEW">RESEARCH</a>
+      <a href="#achievements" data-cursor="VIEW">ACHIEVEMENTS</a>
+      <a href="#contact" data-cursor="VIEW">CONTACT</a>
+    </nav>
+    <div class="nav-status">
+      <span class="status-dot"></span> AVAILABLE FOR OPPORTUNITIES
+    </div>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Mobile fullscreen menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <nav>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#research">Research</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="mobile-menu-status"><span class="status-dot"></span> AVAILABLE FOR OPPORTUNITIES</div>
+  </div>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <svg class="hero-diagram" id="heroDiagram" viewBox="0 0 900 560" preserveAspectRatio="xMidYMid meet"
+        aria-hidden="true">
+        <g class="flow-lines">
+          <path d="M40,120 C220,60 300,220 480,180 S760,60 880,140" class="flow-path" />
+          <path d="M20,300 C200,340 340,260 520,320 S780,260 900,340" class="flow-path" />
+          <path d="M60,460 C240,420 360,500 540,440 S800,500 880,420" class="flow-path" />
+        </g>
+        <g class="flow-nodes">
+          <circle cx="120" cy="150" r="4" class="flow-node" />
+          <circle cx="420" cy="200" r="4" class="flow-node" />
+          <circle cx="700" cy="120" r="4" class="flow-node" />
+          <circle cx="240" cy="320" r="4" class="flow-node" />
+          <circle cx="560" cy="300" r="4" class="flow-node" />
+          <circle cx="800" cy="360" r="4" class="flow-node" />
+        </g>
+      </svg>
+
+      <p class="hero-eyebrow reveal-line">INDUSTRIAL CHEMICAL ENGINEERING TECHNOLOGY</p>
+      <h1 class="hero-title">
+        <span class="line reveal-line">CHEMISTRY</span>
+        <span class="line reveal-line">IN MOTION.</span>
+      </h1>
+      <p class="hero-sub reveal-line">Interested in quality control, production processes, research, and sustainable
+        industrial solutions.</p>
+
+      <div class="hero-badge" id="heroBadge">
+        <svg viewBox="0 0 100 100" class="badge-orbit">
+          <path id="badgeCircle" d="M 50,50 m -40,0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" fill="none" />
+        </svg>
+        <span>BASED IN SEMARANG, INDONESIA</span>
+      </div>
+
+      <div class="hero-scroll-cue">
+        <span>SCROLL TO EXPLORE</span>
+        <span class="scroll-arrow">↓</span>
+      </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section class="intro" id="about">
+      <div class="intro-grid">
+        <div class="intro-copy">
+          <p class="eyebrow">INTRODUCTION</p>
+          <p class="intro-lead">
+            <span class="reveal-word">I</span>
+            <span class="reveal-word">am</span>
+            <span class="reveal-word">a</span>
+            <span class="reveal-word">recent</span>
+            <span class="reveal-word">graduate</span>
+            <span class="reveal-word">in</span>
+            <span class="reveal-word">Industrial</span>
+            <span class="reveal-word">Chemical</span>
+            <span class="reveal-word">Engineering</span>
+            <span class="reveal-word">Technology</span>
+            <span class="reveal-word">from</span>
+            <span class="reveal-word">Universitas</span>
+            <span class="reveal-word">Diponegoro,</span>
+            <span class="reveal-word">with</span>
+            <span class="reveal-word">a</span>
+            <span class="reveal-word">strong</span>
+            <span class="reveal-word">interest</span>
+            <span class="reveal-word">in</span>
+            <span class="reveal-word">petrochemical</span>
+            <span class="reveal-word">processes,</span>
+            <span class="reveal-word">quality</span>
+            <span class="reveal-word">management,</span>
+            <span class="reveal-word">production,</span>
+            <span class="reveal-word">and</span>
+            <span class="reveal-word">biomass</span>
+            <span class="reveal-word">renewable-energy</span>
+            <span class="reveal-word">research.</span>
+          </p>
+          <p class="intro-body">
+            My interest sits at the intersection of the petrochemical industry and biomass renewable
+            energy — understanding how a process is monitored, sampled, and evaluated, and how that same
+            discipline can be pointed toward more sustainable industrial systems.
+          </p>
+        </div>
+        <div class="intro-stat">
+          <p class="eyebrow">EDUCATION</p>
+          <div class="counter          <span class=" counter" data-target="3.73" data-decimals="2">0.00</span>
+            <span class="counter-suffix">/ 4.00</span>
+          </div>
+          <p class="stat-label">GPA</p>
+          <p class="stat-school">UNIVERSITAS DIPONEGORO</p>
+          <p class="stat-period">AUG 2022 — JUL 2026</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BY THE NUMBERS -->
+    <section class="numbers">
+      <p class="eyebrow center">BY THE NUMBERS</p>
+      <div class="numbers-grid">
+        <div class="number-item">
+          <span class="big-number" data-target="3.73" data-decimals="2">0.00</span>
+          <span class="number-label">GPA / 4.00</span>
+        </div>
+        <div class="number-item">
+          <span class="big-number" data-target="2025" data-decimals="0">0</span>
+          <span class="number-label">PETROCHEMICAL INTERNSHIP</span>
+        </div>
+        <div class="number-item">
+          <span class="big-number" data-target="3" data-decimals="0">0</span>
+          <span class="number-label">ISO CERTIFICATIONS</span>
+        </div>
+        <div class="number-item">
+          <span class="big-number" data-suffix="rd" data-target="3" data-decimals="0">0</span>
+          <span class="number-label">PLACE — SINEC</span>
+        </div>
+        <div class="number-item">
+          <span class="big-number" data-target="1" data-decimals="0">0</span>
+          <span class="number-label">INTERNATIONAL PROCEEDING</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- INDUSTRIAL EXPERIENCE — STICKY CASE STUDY -->
+    <section class="process-section" id="experience">
+      <div class="process-sticky">
+        <div class="process-header">
+          <p class="eyebrow">INSIDE THE PROCESS</p>
+          <h2 class="process-title">PT LOTTE CHEMICAL TITAN NUSANTARA</h2>
+          <p class="process-meta">Cilegon, Indonesia — September 2025 – October 2025</p>
+        </div>
+
+        <div class="process-body">
+          <svg class="process-diagram" id="processDiagram" viewBox="0 0 320 640" preserveAspectRatio="xMidYMid meet">
+            <line x1="160" y1="30" x2="160" y2="610" class="process-spine" />
+            <line x1="160" y1="30" x2="160" y2="610" class="process-spine-fill" id="processSpineFill" />
+            <g class="process-node-g" data-step="0">
+              <circle cx="160" cy="30" r="7" /><text x="182" y="35">FIELD</text>
+            </g>
+            <g class="process-node-g" data-step="1">
+              <circle cx="160" cy="150" r="7" /><text x="182" y="155">PROCESS</text>
+            </g>
+            <g class="process-node-g" data-step="2">
+              <circle cx="160" cy="270" r="7" /><text x="182" y="275">OBSERVATION</text>
+            </g>
+            <g class="process-node-g" data-step="3">
+              <circle cx="160" cy="390" r="7" /><text x="182" y="395">SAMPLE</text>
+            </g>
+            <g class="process-node-g" data-step="4">
+              <circle cx="160" cy="490" r="7" /><text x="182" y="495">QUALITY</text>
+            </g>
+            <g class="process-node-g" data-step="5">
+              <circle cx="160" cy="610" r="7" /><text x="182" y="615">EVALUATION</text>
+            </g>
+          </svg>
+
+          <div class="process-steps">
+            <div class="process-step" data-step="0">
+              <span class="step-index">01</span>
+              <h3>Operational Monitoring</h3>
+              <p>Assisted daily production activities in petrochemical processing units, including operational
+                monitoring and field operator coordination.</p>
+            </div>
+            <div class="process-step" data-step="1">
+              <span class="step-index">02</span>
+              <h3>Equipment &amp; Process Observation</h3>
+              <p>Conducted equipment and process observations to ensure compliance with operational and safety
+                procedures.</p>
+            </div>
+            <div class="process-step" data-step="2">
+              <span class="step-index">03</span>
+              <h3>Sampling &amp; Quality Control</h3>
+              <p>Collected and prepared production samples for laboratory analysis to support quality control and
+                process evaluation.</p>
+            </div>
+            <div class="process-step" data-step="3">
+              <span class="step-index">04</span>
+              <h3>Troubleshooting &amp; Shift Discussions</h3>
+              <p>Participated in shift discussions, plant walkthroughs, and troubleshooting activities related to
+                production processes.</p>
+            </div>
+            <div class="process-step" data-step="4">
+              <span class="step-index">05</span>
+              <h3>Petrochemical Production Exposure</h3>
+              <p>Gained hands-on exposure to petrochemical production systems, process flow understanding, and
+                industrial work culture.</p>
+            </div>
+            <div class="process-step" data-step="5">
+              <span class="step-index">06</span>
+              <h3>Process Evaluation</h3>
+              <p>Supported laboratory analysis and data synthesis for continuous evaluation of production efficiency and
+                quality.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HORIZONTAL RESEARCH / IDEAS -->
+    <section class="ideas" id="ideas">
+      <p class="eyebrow">IDEAS THAT MOVE INDUSTRY</p>
+      <div class="ideas-track-wrap">
+        <div class="ideas-track" id="ideasTrack">
+
+          <article class="idea-card">
+            <div class="idea-visual" data-visual="bioavtur">
+              <img src="assets/images/idea1.png" alt="Bioavtur concept" onerror="this.style.display='none'">
+            </div>
+            <p class="idea-eyebrow">3RD PLACE — SUSTAINABLE INNOVATIONS ESSAY COMPETITION (SINEC) · AUGUST 2025</p>
+            <h3>Bioavtur from Nyamplung</h3>
+            <p>Developed innovative bioavtur concept utilizing nyamplung fruit (<em>Calophyllum inophyllum</em>) as
+              renewable and sustainable aviation fuel. Conducted biomass research and collaborated on scientific paper
+              preparation.</p>
+          </article>
+
+          <article class="idea-card">
+            <div class="idea-visual" data-visual="biopellet">
+              <img src="assets/images/idea2.png" alt="Biopellet concept" onerror="this.style.display='none'">
+            </div>
+            <p class="idea-eyebrow">INTERNATIONAL ESSAY COMPETITION · ABSTRACT SELECTION FINALIST · MAY 2025</p>
+            <h3>Water Hyacinth + Corncob Biopellet</h3>
+            <p>Developed essay entitled <em>"Optimizing Renewable Energy from Water Hyacinth Through Corncob-Enriched
+                Biopellets for Indonesia's Industrial Clean Energy"</em> for Explosion of Chemical Engineering Study
+              Activities.</p>
+          </article>
+
+          <article class="idea-card">
+            <div class="idea-visual" data-visual="digital">
+              <img src="assets/images/idea3.png" alt="Digital Symbiosis concept" onerror="this.style.display='none'">
+            </div>
+            <p class="idea-eyebrow">INTELLECTUAL PROPERTY (HAKI) · DGIP MINISTRY OF LAW AND HUMAN RIGHTS</p>
+            <h3>Digital Symbiosis</h3>
+            <p>Poster entitled <em>"Digital Symbiosis: Human-AI Collaboration for Sustainable Industrial and Workforce
+                Management"</em> registered with the Directorate General of Intellectual Property.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH / PUBLICATION -->
+    <section class="research" id="research">
+      <p class="eyebrow light">RESEARCH / PUBLICATION</p>
+      <div class="paper" id="paperCard">
+        <div class="paper-fold" aria-hidden="true"></div>
+        <h3 class="paper-title">Proximate Composition and Nutritional Characteristics of Analog Rice Produced from
+          Cassava Flour, Corn Flour, and Tempeh Flour</h3>
+        <div class="paper-meta">
+          <span>Status — Accepted for presentation / publication</span>
+          <span>International Proceeding, 2026</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="certs">
+      <p class="eyebrow center">STANDARD MATTERS</p>
+      <div class="certs-row">
+        <div class="cert-stamp">
+          <span class="cert-code">ISO 9001:2015</span>
+          <span class="cert-name">Quality Management System</span>
+          <span class="cert-year">2026</span>
+        </div>
+        <div class="cert-stamp">
+          <span class="cert-code">ISO 14001:2015</span>
+          <span class="cert-name">Environmental Management System</span>
+          <span class="cert-year">2026</span>
+        </div>
+        <div class="cert-stamp">
+          <span class="cert-code">ISO 45001:2018</span>
+          <span class="cert-name">Occupational Health &amp; Safety Management System</span>
+          <span class="cert-year">2026</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNATURE: THE INDUSTRIAL FLOW -->
+    <section class="flow-signature" id="industrialFlow">
+      <p class="eyebrow center">THE INDUSTRIAL FLOW</p>
+      <p class="flow-sub">A visual metaphor for how the work connects — not a literal process diagram.</p>
+      <svg class="flow-signature-svg" id="flowSignatureSvg" viewBox="0 0 1000 200" preserveAspectRatio="xMidYMid meet">
+        <line x1="60" y1="100" x2="940" y2="100" class="fs-track" />
+        <circle id="fsParticle" cx="60" cy="100" r="6" class="fs-particle" />
+        <g class="fs-node" data-i="0" transform="translate(60,100)">
+          <circle r="9" /><text y="40">INPUT</text><text y="58" class="fs-sub">production</text>
+        </g>
+        <g class="fs-node" data-i="1" transform="translate(280,100)">
+          <circle r="9" /><text y="40">PROCESS</text><text y="58" class="fs-sub">quality</text>
+        </g>
+        <g class="fs-node" data-i="2" transform="translate(500,100)">
+          <circle r="9" /><text y="40">QUALITY</text><text y="58" class="fs-sub">research</text>
+        </g>
+        <g class="fs-node" data-i="3" transform="translate(720,100)">
+          <circle r="9" /><text y="40">RESEARCH</text><text y="58" class="fs-sub">sustainability</text>
+        </g>
+        <g class="fs-node" data-i="4" transform="translate(940,100)">
+          <circle r="9" /><text y="40">IMPACT</text><text y="58" class="fs-sub">leadership</text>
+        </g>
+      </svg>
+    </section>
+
+    <!-- ORGANIZATION & LEADERSHIP -->
+    <section class="timeline-section">
+      <p class="eyebrow">ORGANIZATION &amp; LEADERSHIP</p>
+      <div class="timeline-wrap">
+        <div class="timeline-track" id="timelineTrack">
+          <div class="timeline-line"></div>
+
+          <div class="timeline-event">
+            <span class="tl-year">JUNE 2023 – DEC 2023</span>
+            <h4>Junior Staff of Economics &amp; Business</h4>
+            <p class="tl-org">HMTRKI (Student Association)</p>
+            <p class="tl-detail">Managed creative business initiatives including food and service sales to generate
+              revenue and ensure consistent profit contribution.</p>
+          </div>
+
+          <div class="timeline-event">
+            <span class="tl-year">AUG 2023</span>
+            <h4>Fundraising Staff — Welcome Party &amp; Retreat</h4>
+            <p class="tl-org">Christian Student Fellowship of Vocational School (PMK)</p>
+            <p class="tl-detail">Executed food &amp; service fundraising initiatives and leveraged digital platforms to
+              achieve event operational funding targets.</p>
+          </div>
+
+          <div class="timeline-event">
+            <span class="tl-year">NOV 2023</span>
+            <h4>Secretary &amp; Treasurer — Entrepreneurship Webinar &amp; PMW</h4>
+            <p class="tl-org">Industrial Chemical Engineering Technology (HMTRKI)</p>
+            <p class="tl-detail">Prepared administrative proposals and LPJ, managed committee finances,
+              income/expenditure reports, and operational needs.</p>
+          </div>
+
+          <div class="timeline-event">
+            <span class="tl-year">JULY 2024 – DEC 2024</span>
+            <h4>Ministry Affair Staff</h4>
+            <p class="tl-org">Christian Student Fellowship of Vocational School (PMK)</p>
+            <p class="tl-detail">Developed and coordinated spiritual programs, mentored junior staff members, and
+              collaborated across cross-division teams.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section class="achievements" id="achievements">
+      <h2 class="achievements-title">RESULTS, NOT JUST IDEAS.</h2>
+      <div class="achievements-grid">
+        <div class="achievement-card">
+          <span class="ach-rank" data-target="3">0</span>
+          <p class="ach-name">Sustainable Innovations Essay Competition (SINEC)</p>
+          <p class="ach-detail">3rd Place — Implementative Idea Category (Aug 2025)</p>
+        </div>
+        <div class="achievement-card">
+          <span class="ach-rank-text">FINALIST</span>
+          <p class="ach-name">International Essay Competition — Explosion of Chemical Engineering Study Activities</p>
+          <p class="ach-detail">Abstract Selection Finalist (May 2025)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills">
+      <p class="eyebrow center">INDUSTRIAL TOOLKIT</p>
+      <div class="skills-columns">
+        <div class="skill-group">
+          <h4>Technical</h4>
+          <div class="skill-nodes">
+            <span class="skill-node" data-cat="Technical">Visio</span>
+            <span class="skill-node" data-cat="Technical">MatLab</span>
+            <span class="skill-node" data-cat="Technical">Aspen Hysys</span>
+            <span class="skill-node" data-cat="Technical">UniSim</span>
+            <span class="skill-node" data-cat="Technical">Microsoft Office</span>
+            <span class="skill-node" data-cat="Technical">Google Workspace</span>
+            <span class="skill-node" data-cat="Technical">Canva</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Soft Skills</h4>
+          <div class="skill-nodes">
+            <span class="skill-node" data-cat="Soft Skill">Public Speaking</span>
+            <span class="skill-node" data-cat="Soft Skill">Teamwork &amp; Collaboration</span>
+            <span class="skill-node" data-cat="Soft Skill">Communication</span>
+            <span class="skill-node" data-cat="Soft Skill">Critical Thinking</span>
+            <span class="skill-node" data-cat="Soft Skill">Creative Leadership</span>
+            <span class="skill-node" data-cat="Soft Skill">Problem Solving</span>
+            <span class="skill-node" data-cat="Soft Skill">Active Listening</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Languages</h4>
+          <div class="skill-nodes">
+            <span class="skill-node" data-cat="Language">Indonesian (Native)</span>
+            <span class="skill-node" data-cat="Language">English (Proficient)</span>
+            <span class="skill-node" data-cat="Language">Javanese</span>
+          </div>
+        </div>
+      </div>
+      <div class="skill-tooltip" id="skillTooltip"></div>
+    </section>
+
+    <!-- WHAT I CARE ABOUT -->
+    <section class="care">
+      <div class="care-col" data-depth="20">
+        <span class="care-index">QUALITY</span>
+        <p>“Precision matters.”</p>
+      </div>
+      <div class="care-col" data-depth="35">
+        <span class="care-index">PROCESS</span>
+        <p>“Understand before optimizing.”</p>
+      </div>
+      <div class="care-col" data-depth="20">
+        <span class="care-index">SUSTAINABILITY</span>
+        <p>“Engineering should move industry forward responsibly.”</p>
+      </div>
+    </section>
+
+    <!-- ABOUT ME -->
+    <section class="about-me">
+      <div class="about-portrait">
+        <!-- Replace this placeholder with a real photo at assets/images/profile.jpg -->
+        <div class="portrait-frame">
+          <img src="assets/images/profile.png" alt="Portrait of Zefania Sinaringtyas Widuri"
+            onerror="this.style.display='none'; this.parentElement.classList.add('portrait-empty')">
+          <span class="portrait-placeholder-label">PHOTO</span>
+        </div>
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow">ABOUT</p>
+        <p>
+          I'm a Industrial Chemical Engineering Technology graduate from Diponegoro University.
+          My hands-on experience in petrochemical production at PT Lotte Chemical Titan Nusantara and continuous
+          research in biomass-based renewable energy enable me to bridge process monitoring, quality control, and
+          industrial sustainability.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <h2 class="contact-title">LET'S CREATE SOMETHING<br>THAT MOVES INDUSTRY.</h2>
+      <p class="contact-name">Zefania Sinaringtyas Widuri</p>
+      <div class="contact-links">
+        <a class="magnetic-btn" href="mailto:zefaniawiduri@gmail.com">EMAIL ME <span>↗</span></a>
+        <a class="magnetic-btn" href="https://www.linkedin.com/in/zefania-sinaringtyas-widuri-1b3689249/"
+          target="_blank" rel="noopener">LINKEDIN <span>↗</span></a>
+      </div>
+      <div class="contact-meta">
+        <span>+62 821 3735 5424</span>
+        <span>Pati, Indonesia</span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <span>ZEFANIA SINARINGTYAS WIDURI</span>
+    <span>INDUSTRIAL CHEMICAL ENGINEERING TECHNOLOGY</span>
+    <div class="footer-bottom">
+      <span>© 2026 Zefania Sinaringtyas Widuri</span>
+      <span>Designed &amp; built as a personal portfolio.</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
